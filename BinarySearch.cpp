@@ -4,7 +4,7 @@ using namespace std;
 int element[10];
 int nPanjang;
 int x;
-
+//Procedure Input
 void input(){
     while (true)
     {
@@ -25,7 +25,7 @@ void input(){
         cin >> element[i];
     }
 }
-
+//Procedure Sorting Data Bubble Sort
 void BubbleSort(){
     int pass =1;
     do
