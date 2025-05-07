@@ -6,7 +6,6 @@ int nPanjang;
 int x;
 
 void input(){
-
     while (true)
     {
         cout << "Masukkan Jumlah elemen pada array (maksimal 10) : ";
@@ -41,7 +40,6 @@ void BubbleSort(){
         }
         pass++;
     } while (pass <= nPanjang - 1);
-    
 }
 
 void display(){
