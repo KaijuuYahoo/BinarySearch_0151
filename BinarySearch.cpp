@@ -17,7 +17,6 @@ void input(){
                 cout<<"Jumlah elemen yang anda masukkan melebihi batas yang ditentukan. Silahkan pilih ulang (maksimal 10)"<<endl;
             }
     }
-
     cout << "=======================" << endl;
     cout << " Masukkan Elemen Array " << endl;
     cout << "=======================" << endl;
@@ -46,11 +45,9 @@ void BubbleSort(){
 }
 
 void display(){
-
     cout << "=====================================" << endl;
     cout << " Elemen Array Setelah Diurutkan (Asc)" << endl;
     cout << "=====================================" << endl;
-
     for(int j = 0 ; j < nPanjang ; j++){
         cout << element[j];
         if (j < nPanjang - 1)
@@ -72,8 +69,6 @@ void BinarySearch(){
         cin >> x ;
         int low = 0;
         int high = nPanjang - 1;
-
-
         do
         {
             int mid = (low + high)/2;
@@ -82,11 +77,9 @@ void BinarySearch(){
                 cout << "\n[v] Element " << x << " ditemukan pada indeks " << mid << "."<< endl;
                 return;
             }
-
             if (x < element[mid]){
                 high = mid - 1;
             }
-
             if (x > element[mid]){
                 low = mid + 1;
             }
@@ -98,7 +91,6 @@ void BinarySearch(){
         cout<< "Ingin Mencari Lagi ? (Y/N) : ";
         cin >> ulang ;
     } while (ulang == 'y' || ulang == 'Y');
-    
 }
 
 int main (){
