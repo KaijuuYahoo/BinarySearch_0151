@@ -1,5 +1,4 @@
 #include<iostream>
-#include<string>
 using namespace std;
 
 int element[10];
@@ -33,8 +32,8 @@ void BubbleSort(){
     int pass =1;
     do
     {
-        for (int j =0; j < nPanjang-1-pass;j++){
-            if (element[j]>element[j+1])
+        for (int j =0; j <= nPanjang-1-pass;j++){
+            if (element[j] > element[j+1])
             {
                 int temp = element[j];
                 element[j] = element [j+1];
@@ -52,14 +51,14 @@ void display(){
     cout << " Elemen Array Setelah Diurutkan (Asc)" << endl;
     cout << "=====================================" << endl;
 
-    for(int j=0;j < nPanjang; j++){
-        cout<< element[j];
-        if (j < nPanjang -1)
+    for(int j = 0 ; j < nPanjang ; j++){
+        cout << element[j];
+        if (j < nPanjang - 1)
         {
-            cout << "--->";
+            cout << " --> ";
         }
-        cout<< endl;
     }
+    cout<< endl;
 }
 
 void BinarySearch(){
@@ -71,32 +70,32 @@ void BinarySearch(){
         cout << "=====================================" << endl;
         cout << "Masukkan Elemen yang Ingin dicari : " ;
         cin >> x ;
-        cout<<endl;
-
         int low = 0;
         int high = nPanjang - 1;
 
 
         do
         {
-            int mid = (mid + low)/2;
+            int mid = (low + high)/2;
             if (element[mid] == x)
             {
-                cout << "[✓] Element " << x << " ditemukan pada indeks " << mid << "."<< endl;
+                cout << "\n[v] Element " << x << " ditemukan pada indeks " << mid << "."<< endl;
+                return;
             }
 
-            if(x < element[mid]){
+            if (x < element[mid]){
                 high = mid - 1;
             }
 
-            if(x < element[mid]){
+            if (x > element[mid]){
                 low = mid + 1;
-            }            
+            }
         } while (low <= high);
+
         if(low > high){
-            cout << "[✓] Element " << x << " Tidak ditemukan dalam Array.\n";
+            cout << "[v] Element " << x << " Tidak ditemukan dalam Array.\n";
         }
-        cout<< "Ingin Mencari Lagi ? (Y/N) : \n";
+        cout<< "Ingin Mencari Lagi ? (Y/N) : ";
         cin >> ulang ;
     } while (ulang == 'y' || ulang == 'Y');
     
@@ -106,5 +105,5 @@ int main (){
     input();
     BubbleSort();
     display();
-    Bi
+    BinarySearch();
 }
